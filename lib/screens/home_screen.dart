@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_flutter_solid/widgets/clickable_widget.dart';
 
 /// Initial screen
 class HomeScreen extends StatelessWidget {
@@ -8,43 +9,29 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.grey,
       ),
-      home: const MyHomePage(title: 'Flutter test'),
+      home: const MyHomeScreen(),
     );
   }
 }
 
 ///
-class MyHomePage extends StatefulWidget {
-  ///
-  final String title;
-
-  ///
-  const MyHomePage({super.key, required this.title});
+class MyHomeScreen extends StatefulWidget {
+  /// Constructor of MyHomeScreen
+  const MyHomeScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomeScreen> createState() => _MyHomeScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomeScreenState extends State<MyHomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Hello there',
-            ),
-          ],
-        ),
-      ),
+    return const Scaffold(
+      body: ClickableWidget(),
     );
   }
 }
