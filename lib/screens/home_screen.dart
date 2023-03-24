@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const HomeScreen());
-}
-
 /// Initial screen
 class HomeScreen extends StatelessWidget {
-  ///
+  /// Constructor of initial screen
   const HomeScreen({super.key});
 
   @override
@@ -44,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: const <Widget>[
             Text(
-              'Hi there',
+              'Hello there',
             ),
           ],
         ),

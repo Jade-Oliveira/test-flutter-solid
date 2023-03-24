@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:test_flutter_solid/home_screen.dart';
+import 'package:test_flutter_solid/screens/home_screen.dart';
 
 void main() {
   testWidgets('Hi there', (WidgetTester tester) async {
